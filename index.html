@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>DSC PESU</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
     <link
         href="https://fonts.googleapis.com/css?family=Google+Sans:400,400i,500,500i,700,700i|Google+Sans+Display:400,400i,500,500i,700,700i&;subset=all"
@@ -22,7 +23,7 @@
 
 <body>
     <link rel="stylesheet" type="text/css" media="screen" href="bundle.css">
-    <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand"><a class="navbar-item" href="/"><img src="assets/DSC PESU.png"
                         alt="Developer Student Clubs" height="48"></a><a class="navbar-burger" role="button"
@@ -30,9 +31,9 @@
                         aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
             <div class="navbar-menu" id="navMenu">
                 <div class="navbar-start"></div>
-                <div class="navbar-end"><a class="navbar-item" href="#pesu">PESU Academy</a>
+                <div class="navbar-end"><a class="navbar-item" href="https://pesuacademy.com/Academy">PESU Academy</a>
                     <div class="navbar-item">
-                        <button class="mdc-button mdc-button--outlined" onclick="location.href='crew.php';">
+                        <button class="mdc-button mdc-button--outlined" onclick="location.href='register.html';">
                             <span class="mdc-button__label">Register Now!</span>
                         </button></div>
                 </div>
@@ -48,12 +49,15 @@
                         <h1 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Welcome to The
                             Developer Student Clubs</h1>
                         <h2 class="subtitle is-size-2-desktop">PES University</h2>
+                        <button class="mdc-button mdc-button--outlined" onclick="location.href='register.html';">
+                            <span class="mdc-button__label">Register Now!</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
         <div class="hero-foot">
-            <div class="container"><img class="is-bottom" src="assets/hero.png"></div>
         </div>
     </section>
 
@@ -227,7 +231,41 @@
             </div>
     </section>
 </body>
-
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 <script src="bundle.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function () {
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+
+        });
+    });
+</script>
+
+<script>
+    // $(window).scroll(function () {
+    //     if ($(window).scrollTop() > 10) {
+    //         $('.navBar').addClass('has-shadow');
+    //     } else {
+    //         $('.navBar').removeClass('has-shadow');
+    //     }
+    // });
+
+    let menu = document.querySelector(".navbar")
+    window.addEventListener("scroll", function(event) {
+      let scroll = this.scrollY;
+      if (scroll) {
+        menu.className = "navbar is-fixed-top has-shadow"
+      } else {
+        menu.className = "navbar is-fixed-top"
+      }
+    });
+</script>
 
 </html>
