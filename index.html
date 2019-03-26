@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head class="has-navbar-fixed-top">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>DSC PESU</title>
@@ -18,24 +18,69 @@
         body {
             font-family: Google Sans;
         }
+
+        .navbar {
+            transition: 0.3s;
+        }
+
+        .navbar.has-shadow {
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 
 <body>
     <link rel="stylesheet" type="text/css" media="screen" href="bundle.css">
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <!-- <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
-            <div class="navbar-brand"><a class="navbar-item" href="/"><img src="assets/DSC PESU.png"
-                        alt="Developer Student Clubs" height="48"></a><a class="navbar-burger" role="button"
-                    aria-label="menu" aria-expanded="false" data-target="#navMenu"><span aria-hidden="true"></span><span
-                        aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="assets/DSC PESU.png" alt="Developer Student Clubs" height="48">
+                </a>
+                <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="#navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true">
+                    </span>
+                    <span aria-hidden="true">
+
+                    </span>
+                </a>
+            </div>
             <div class="navbar-menu" id="navMenu">
                 <div class="navbar-start"></div>
-                <div class="navbar-end"><a class="navbar-item" href="https://pesuacademy.com/Academy">PESU Academy</a>
+                <div class="navbar-end">
+                    <a class="navbar-item" href="https://pesuacademy.com/Academy">PESU Academy</a>
                     <div class="navbar-item">
                         <button class="mdc-button mdc-button--outlined" onclick="location.href='http://bit.ly/dsc-ml';">
                             <span class="mdc-button__label">Register Now!</span>
-                        </button></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="assets/DSC PESU.png" alt="Developer Student Clubs" height="48">
+                </a>
+                <div class="navbar-burger burger" data-target="#navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start"></div>
+                <div class="navbar-end">
+                    <a class="navbar-item" href="https://pesuacademy.com/Academy">PESU Academy</a>
+                    <div class="navbar-item">
+                        <button class="mdc-button mdc-button--outlined" onclick="location.href='http://bit.ly/dsc-ml';">
+                            <span class="mdc-button__label">Register Now!</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -217,7 +262,7 @@
                 </div>
                 <div class="column">
                     <div class="member">
-                        <div class="photo"><img src="assets/DSC-Badge.svg" /></div>
+                        <div class="photo"><img src="assets/Ishwar.jpeg" /></div>
                         <div class="name">Ishwar Choudhary</div>
                         <div class="info">Production</div>
                         <ul class="social" style="text-align: center;position: relative">
@@ -231,10 +276,8 @@
             </div>
     </section>
 </body>
-<script
-  src="http://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
 <script src="bundle.js"></script>
 <script>
     $(document).ready(function () {
@@ -260,13 +303,13 @@
     // });
 
     let menu = document.querySelector(".navbar")
-    window.addEventListener("scroll", function(event) {
-      let scroll = this.scrollY;
-      if (scroll) {
-        menu.className = "navbar is-fixed-top has-shadow"
-      } else {
-        menu.className = "navbar is-fixed-top"
-      }
+    window.addEventListener("scroll", function (event) {
+        let scroll = this.scrollY;
+        if (scroll) {
+            menu.className = "navbar is-fixed-top has-shadow"
+        } else {
+            menu.className = "navbar is-fixed-top"
+        }
     });
 </script>
 
